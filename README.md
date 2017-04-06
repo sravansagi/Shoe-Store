@@ -39,6 +39,7 @@ the field is visible for the user
 ---------------------------------------
 Environment used for testing
 ---------------------------------------
+- Eclipse
 - Windows 10 64 bit
 - Selenium 3.3.1
 - Firefox 53.0 beta channel 9 (32-bit)
@@ -47,4 +48,16 @@ Environment used for testing
 - Chrome Driver 2.29 (32-bit)
 - jdk 1.8
 
-* I have used firefox and google chrome drivers,Same tests with little modification in the initilization of the browser can be used to extend the test cases to PhantomJS, HTML Unit ( both for head less automation ), Edge , IE , Opera browsers 
+I have used firefox and google chrome drivers,Same tests with little modification in the initilization of the browser can be used to extend the test cases to PhantomJS, HTML Unit ( both for head less automation ), Edge , IE , Opera browsers 
+
+Edit:
+Have shared the execution video(.mp4) and execution result(TestNG report) in results folder
+
+** have not uploaded the selenium dependency and browser drivers to the github repo. New locations of the drivers have to be updated in the commonconstants class
+--------------
+Libraries Used
+--------------
+
+1) Selenium - http://www.seleniumhq.org/
+2) TestNG - http://testng.org/
+3) Apache Commons Lang3 - https://commons.apache.org/proper/commons-lang/

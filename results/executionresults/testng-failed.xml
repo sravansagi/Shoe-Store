@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RBShoeStoreSuite]">
+  <test name="RBShoeStore(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tst.shoestore.ShoeStore">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="monthNewReleaseDisplay"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- tst.shoestore.ShoeStore -->
+    </classes>
+  </test> <!-- RBShoeStore(failed) -->
+</suite> <!-- Failed suite [RBShoeStoreSuite] -->
