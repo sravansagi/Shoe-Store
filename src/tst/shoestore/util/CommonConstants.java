@@ -26,5 +26,6 @@ public class CommonConstants {
 	public static final String EMAIL_REMAINDER_ENTER_EMAIL_MSG = "Please enter an email address";
 	public static final String EMAIL_REMAINDER_ENTER_EMAIL_EMPTY_MSG = "Empty email message not proper";
 	public static final String EMAIL_REMAINDER_ENTER_EMAIL_EMPTY_NOTAVAILABLE = "Unable to check for no input";
+	public static final String CHROME_DRIVER_PATH = "C:\\Users\\HP\\Downloads\\chromedriver_win32\\chromedriver.exe";
 	
 }

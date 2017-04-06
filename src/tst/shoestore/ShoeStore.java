@@ -72,7 +72,7 @@ public class ShoeStore {
 			capabilities.setCapability("marionette", true);
 			driver = new FirefoxDriver(capabilities);
 		}else if("chrome".equalsIgnoreCase(browser)){
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", CommonConstants.CHROME_DRIVER_PATH);
 			driver = new ChromeDriver();
 		} else{
 			System.setProperty("webdriver.gecko.driver", CommonConstants.GECKO_DRIVER_PATH);

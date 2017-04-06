@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="RBShoeStoreSuite" parallel="false">
   <test name="RBShoeStore">
-  	<parameter name="browser" value="firefox" />
+  	<parameter name="browser" value="chrome" />
     <classes>
       <class name="tst.shoestore.ShoeStore"/>
     </classes>
