@@ -1,0 +1,56 @@
+Defects of Shoe Store:
+Assuming Severity and Priority on scales of 1-5 where 1 corresponds to very low and 5 corresponds to very high
+5 - Very High
+4 - High
+3 - Medium
+2 - Low
+1 - Very Low
+---------------------------------------------
+Defects related to the User Stores
+
+******************
+The defects that i have encountered during the exploratory testing of the website like incorrect validation of email for non existing stocks, duplicate values in drop down, i am not adding in this defects sheet as the above scenario does not come with respect to the given two scenarios
+*******************
+----------------------------------------------
+
+1) November month Shoe Release does not contain images
+Severity:5
+Priority:5
+Description: The images for shoe released are not displayed for the months of november
+Steps to recreate/replicate:
+Open Home page
+Click on November month link
+
+2) Invalid Email address message is shown for valid email addresses with only two values after .(rvq1c0u0e4@obaujlztmme.bj)
+Severity:3
+Priority:4
+Description: When a email address is given with only 2 characters after the . then invalid email message for remainder email is shown
+Steps to recreate/replicate:
+Open Home page
+Enter a valid email address with only two values after .(z10c98m0k6@qeqkbounz.em) and click submit
+
+3) Connection not secure alert coming for all pages except the home page
+Severity:3
+Priority:3
+Description: For all pages except the Home page, Connection not secure message is displayed against the certificate.
+Steps to recreate/replicate:
+Open Home page
+Click on any months link from the header
+
+4) Some of the shoe description contains description as pre order the shoes.
+Severity:1
+Priority:1
+Description: As Mark is targetting only for displaying the new releases in the initial version of the website the description can be changed or the steps to pre ordering the shoes can be provided
+Steps to recreate/replicate:
+Open Home page
+Click on January month link
+view the 4th shoe description
+
+
+5) No message is shown in December month shoe releases
+Severity:1
+Priority:1
+Description: When the december month shoe releases page is opened, as they are no releases no infomation is shown. As usuful message can be shown to user instead of blank page
+Steps to recreate/replicate:
+Open Home page
+Click on December's month page
