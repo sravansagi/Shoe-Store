@@ -2,10 +2,12 @@ package tst.shoestore;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -16,7 +18,7 @@ import tst.shoestore.pages.ShoeStoreMonthLandingPage;
 import tst.shoestore.util.CommonConstants;
 
 public class ShoeStore {
-	
+
 	WebDriver driver;
 	/**
 	 * This test checks new releases of shoes in all months pages. The Acceptance criteria 
@@ -35,8 +37,8 @@ public class ShoeStore {
 		}
 		Assert.assertEquals(check, CommonConstants.ALL_SHOE_RELEASE_SUCCESS_MSG);
 	}
-	
-	
+
+
 	/**
 	 * This test checks email remainder for the upcoming shoes. The Acceptance criteria 
 	 * 1) There should be an area to submit email address
@@ -53,21 +55,38 @@ public class ShoeStore {
 		}
 		Assert.assertEquals(check, CommonConstants.EMAIL_REMAINDER_SUCCESS_MSG);
 	}
-	
-	
-	
+
+
+
+	/**This method takes the browser type from testNG and open the corresponding browser for automation
+	 * By default if "firefox" or "chrome" is not provided then firefox is taken by default
+	 * 
+	 * @param browser
+	 */
 	@BeforeMethod
-	public void beforeMethod() {
-		System.setProperty("webdriver.gecko.driver", CommonConstants.GECKO_DRIVER_PATH);
-		  DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		  capabilities.setCapability("marionette", true);
-		  driver = new FirefoxDriver(capabilities);
-		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	      driver.get(CommonConstants.STORE_URL);
+	@Parameters("browser")
+	public void beforeMethod(String browser) {
+		if("firefox".equalsIgnoreCase(browser)){
+			System.setProperty("webdriver.gecko.driver", CommonConstants.GECKO_DRIVER_PATH);
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+			capabilities.setCapability("marionette", true);
+			driver = new FirefoxDriver(capabilities);
+		}else if("chrome".equalsIgnoreCase(browser)){
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver_win32\\chromedriver.exe");
+			driver = new ChromeDriver();
+		} else{
+			System.setProperty("webdriver.gecko.driver", CommonConstants.GECKO_DRIVER_PATH);
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+			capabilities.setCapability("marionette", true);
+			driver = new FirefoxDriver(capabilities);
+		}
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(CommonConstants.STORE_URL);
 	}
 
-	
-	
+
+
 	@AfterMethod
 	public void afterMethod() {
 		if (driver != null) {

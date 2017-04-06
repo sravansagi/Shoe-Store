@@ -23,5 +23,8 @@ public class CommonConstants {
 			"Invalid Email Format message not displayed as expected";
 	public static final String EMAIL_REMAINDER_INVALIDINPUT_NOTAVAILABLE = "Invalid Email Message not Available";
 	public static final String EMAIL_REMAINDER_VALIDINPUT_MSG_NOTCORRECT = "Valid Input Email Message not correct";
+	public static final String EMAIL_REMAINDER_ENTER_EMAIL_MSG = "Please enter an email address";
+	public static final String EMAIL_REMAINDER_ENTER_EMAIL_EMPTY_MSG = "Empty email message not proper";
+	public static final String EMAIL_REMAINDER_ENTER_EMAIL_EMPTY_NOTAVAILABLE = "Unable to check for no input";
 	
 }
